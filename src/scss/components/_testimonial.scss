@@ -1,0 +1,94 @@
+.section-testimonial {
+  padding-block: 100px;
+  .container {
+    &-testimonial {
+      @include flex(column, center, center);
+      gap: 60px;
+      .head-content {
+        text-align: center;
+        @include flex(column, center, center);
+        gap: 16px;
+        .subtext {
+          &-display {
+            color: $black;
+            font-family: $font-display;
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 115%; /* 64.4px */
+            letter-spacing: -1.12px;
+          }
+          &-desc {
+            color: $subtext;
+            font-family: $font-display;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%; /* 25.6px */
+            letter-spacing: -0.32px;
+          }
+        }
+      }
+      .body-content {
+        @include flex(column, center, center);
+        gap: 60px;
+        .content-card {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+          .wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+          }
+          .card {
+            padding: 32px 32px;
+            @include flex(column, flex-start, flex-start);
+            gap: 32px;
+            background-color: #FCFCFD;
+            &-desc {
+              color: #4a4a4a;
+              font-family: $font-display;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 160%; /* 25.6px */
+              letter-spacing: -0.32px;
+            }
+            &-profile {
+              @include flex(row, flex-start, flex-start);
+              gap: 16px;
+              .profile {
+                &-img {
+                  max-width: 52px;
+                }
+                &-text {
+                  &-name {
+                    color: $black;
+                    font-family: $font-display;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%; /* 24px */
+                    letter-spacing: -0.4px;
+                    margin-bottom: 9px;
+                  }
+                  &-subject {
+                    color: #908080;
+                    font-family: $font-display;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%; /* 19.2px */
+                    letter-spacing: -0.32px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

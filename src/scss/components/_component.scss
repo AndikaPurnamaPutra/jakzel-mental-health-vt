@@ -1,0 +1,37 @@
+.label {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 8px;
+  padding: 10px 20px;
+  color: $secondary;
+  border-radius: 90px;
+  color: $secondary;
+  font-family: $font-display;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  img {
+    max-width: 32px;
+  }
+  span {
+    flex-shrink: 0;
+  }
+  &-bg {
+    background-color: #fcfcfd;
+  }
+  &-secondary {
+    padding: 10px 25px;
+  }
+  &-bg-dark {
+    @extend .label-secondary;
+    background-color: #2B3C54;
+  }
+  .primary {
+    color: $black;
+  }
+  .secondary {
+    color: $white;
+  }
+}
