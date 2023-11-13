@@ -20,14 +20,15 @@
   }
   &-bg {
     background-color: #fcfcfd;
+    &-dark {
+      @extend .label-secondary;
+      background-color: #2b3c54;
+    }
   }
   &-secondary {
     padding: 10px 25px;
   }
-  &-bg-dark {
-    @extend .label-secondary;
-    background-color: #2B3C54;
-  }
+
   .primary {
     color: $black;
   }

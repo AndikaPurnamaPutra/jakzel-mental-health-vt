@@ -1,5 +1,8 @@
 .section-your-issue {
   padding-block: 100px;
+  @include responsive(md) {
+    padding-block: 50px;
+  }
   .container {
     &-your-issue {
       flex-direction: column;
@@ -7,9 +10,19 @@
       .head-content {
         .subtext {
           @include flex(row, flex-end, space-between);
+          @include responsive(md) {
+            @include flex(column, flex-start, space-between);
+            gap: 16px;
+          }
           &-text {
             @include flex(column, flex-start, flex-start);
             gap: 8px;
+            @include responsive(md) {
+              width: 70%;
+            }
+            @include responsive(sm) {
+              width: 100%;
+            }
             &:nth-child(even) {
               gap: 40px;
             }
@@ -21,6 +34,12 @@
               font-weight: 500;
               line-height: 115%; /* 64.4px */
               letter-spacing: -1.12px;
+              @include responsive(xl) {
+                font-size: 48px;
+              }
+              @include responsive(sm) {
+                font-size: 36px;
+              }
             }
             &-desc {
               color: $subtext;
@@ -39,6 +58,13 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
+        align-items: flex-start;
+        @include responsive(md) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @include responsive(sm) {
+          grid-template-columns: repeat(1, 1fr);
+        }
         .card {
           @include flex(column, flex-end, flex-end);
           background-color: $white;
@@ -67,6 +93,9 @@
                 line-height: 115%; /* 27.6px */
                 letter-spacing: -0.48px;
                 margin-bottom: 16px;
+                @include responsive(xl) {
+                  font-size: 20px;
+                }
               }
               &-desc {
                 color: $subtext;

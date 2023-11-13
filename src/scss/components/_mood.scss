@@ -1,13 +1,23 @@
 .section-mood {
   padding-block: 100px;
+  @include responsive(md) {
+    padding-block: 50px;
+  }
   .container {
     &-mood {
       align-items: center;
       justify-content: space-between;
+      @include responsive(md) {
+        align-items: flex-start;
+        gap: 30px;
+      }
       .content {
         &-left {
           @include flex(column, flex-start, flex-start);
           gap: 8px;
+          @include responsive(md) {
+            width: 100%;
+          }
           .subtext {
             &-text {
               @include flex(column, flex-start, flex-start);
@@ -20,6 +30,12 @@
                 font-weight: 500;
                 line-height: 115%; /* 64.4px */
                 letter-spacing: -1.12px;
+                @include responsive(xl) {
+                  font-size: 48px;
+                }
+                @include responsive(sm) {
+                  font-size: 36px;
+                }
               }
             }
           }
@@ -28,6 +44,12 @@
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 30px;
+          @include responsive(md) {
+            width: 100%;
+          }
+          @include responsive(sm) {
+            grid-template-columns: repeat(1, 1fr);
+          }
           .card {
             @include flex(column, flex-start, flex-start);
             gap: 16px;
@@ -39,6 +61,9 @@
               font-weight: 500;
               line-height: 115%; /* 27.6px */
               letter-spacing: -0.48px;
+              @include responsive(xl) {
+                font-size: 20px;
+              }
             }
             &-desc {
               color: $subtext;

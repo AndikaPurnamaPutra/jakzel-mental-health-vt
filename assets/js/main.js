@@ -2,13 +2,13 @@ console.log("hallo");
 
 // logic respondsive
 
-// const btnRes = document.querySelector(".nav-btn-respondsive");
-// const menu = document.querySelector(".nav-menu");
+const btnRes = document.querySelector(".nav-btn-respondsive");
+const menu = document.querySelector(".nav-menu");
 
-// btnRes.addEventListener("click", () => {
-// 	menu.classList.toggle("active");
-// 	btnRes.classList.toggle("cross");
-// });
+btnRes.addEventListener("click", () => {
+	menu.classList.toggle("active");
+	btnRes.classList.toggle("cross");
+});
 
 AOS.init({
 	disable: function () {

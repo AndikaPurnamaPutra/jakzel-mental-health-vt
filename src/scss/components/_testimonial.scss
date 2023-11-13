@@ -1,5 +1,8 @@
 .section-testimonial {
   padding-block: 100px;
+  @include responsive(md) {
+    padding-block: 50px;
+  }
   .container {
     &-testimonial {
       @include flex(column, center, center);
@@ -17,6 +20,12 @@
             font-weight: 500;
             line-height: 115%; /* 64.4px */
             letter-spacing: -1.12px;
+            @include responsive(xl) {
+              font-size: 48px;
+            }
+            @include responsive(sm) {
+              font-size: 36px;
+            }
           }
           &-desc {
             color: $subtext;
@@ -36,17 +45,31 @@
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 30px;
+          @include responsive(xl) {
+            gap: 20px;
+          }
+          @include responsive(md) {
+            grid-template-columns: repeat(1, 1fr);
+          }
           .wrap {
             display: flex;
             flex-direction: column;
             gap: 30px;
-
+            @include responsive(xl) {
+              gap: 20px;
+            }
           }
           .card {
             padding: 32px 32px;
             @include flex(column, flex-start, flex-start);
             gap: 32px;
-            background-color: #FCFCFD;
+            background-color: #fcfcfd;
+            @include responsive(md) {
+              gap: 22px;
+            }
+            @include responsive(md) {
+              padding: 24px 24px;
+            }
             &-desc {
               color: #4a4a4a;
               font-family: $font-display;

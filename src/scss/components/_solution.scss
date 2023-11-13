@@ -1,0 +1,127 @@
+.section-solution {
+  padding-block: 100px;
+  @include responsive(md) {
+    padding-block: 50px;
+  }
+  .container {
+    &-solution {
+      justify-content: space-between;
+      align-items: center;
+      .content {
+        &-left {
+          @include responsive(md) {
+            width: 100%;
+          }
+          &-image {
+            position: relative;
+            // .img-content {
+            // }
+            .img-atribut {
+              position: absolute;
+              bottom: 308px;
+              left: 0;
+              max-width: 282px;
+              @include responsive(xl) {
+                bottom: 222px;
+              }
+              @include responsive(md) {
+                bottom: 43%;
+              }
+              @include responsive(sm) {
+                max-width: 172px;
+                bottom: 40%;
+              }
+            }
+          }
+        }
+        &-right {
+          @include responsive(md) {
+            width: 100%;
+          }
+          .subtext {
+            @include flex(column, flex-start, space-between);
+            gap: 60px;
+            &-text {
+              @extend .subtext;
+              gap: 12px;
+              &-display {
+                color: $black;
+                font-family: $font-display;
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 115%; /* 64.4px */
+                letter-spacing: -1.12px;
+                @include responsive(xl) {
+                  font-size: 48px;
+                }
+                @include responsive(sm) {
+                  font-size: 36px;
+                  letter-spacing: 0;
+                }
+              }
+              &-desc {
+                color: $subtext;
+                font-family: $font-display;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 160%; /* 25.6px */
+                letter-spacing: -0.32px;
+                max-width: 470px;
+              }
+            }
+            .list-item {
+              @include flex(column, null, flex-start);
+              gap: 20px;
+              @include responsive(xl) {
+                gap: 10px;
+              }
+              .item {
+                @include flex(row, center, flex-start);
+                gap: 24px;
+                padding: 24px 24px;
+                background-color: $white;
+                border-radius: 24px;
+                transition: all 300ms ease;
+                @include responsive(md) {
+                  gap: 16px;
+                }
+                &:hover {
+                  box-shadow: 0px 24px 32px 0px rgba(128, 128, 128, 0.05);
+                }
+                &-ic {
+                  max-width: 70px;
+                }
+                &-text {
+                  &-title {
+                    color: $black;
+                    font-family: $font-display;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 115%; /* 27.6px */
+                    letter-spacing: -0.48px;
+                    margin-bottom: 8.5px;
+                    @include responsive(md) {
+                      font-size: 20px;
+                    }
+                  }
+                  &-desc {
+                    color: #a3a3a3;
+                    font-family: $font-display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 160%; /* 19.2px */
+                    letter-spacing: 0.06px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

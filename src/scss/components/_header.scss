@@ -1,14 +1,27 @@
 .section-header {
   padding-block: 100px;
+  @include responsive(md) {
+    padding-block: 50px;
+  }
   .container {
     &-header {
       align-items: center;
       justify-content: space-between;
+      @include responsive(md) {
+        flex-direction: column;
+        gap: 30px;
+      }
       .content {
         &-left {
+          @include responsive(md) {
+            width: 100%;
+          }
           .subtext {
             @include flex(column, flex-start, flex-start);
             gap: 40px;
+            @include responsive(md) {
+              gap: 20px;
+            }
             &-text {
               @extend .subtext;
               gap: 12px;
@@ -21,6 +34,16 @@
                 line-height: 115%; /* 94.3px */
                 letter-spacing: -1.64px;
                 max-width: 470px;
+                @include responsive(xl) {
+                  font-size: 68px;
+                }
+                @include responsive(md) {
+                  max-width: 100%;
+                }
+                @include responsive(sm) {
+                  font-size: 42px;
+                  letter-spacing: 0;
+                }
               }
               &-desc {
                 color: $subtext;
@@ -44,13 +67,25 @@
               font-weight: 500;
               line-height: 160%; /* 19.2px */
               letter-spacing: 0.06px;
+              @include responsive(md) {
+                gap: 8px;
+              }
               img {
                 max-width: 32px;
+              }
+            }
+            .btn-primary {
+              @include responsive(sm) {
+                width: 100%;
               }
             }
           }
         }
         &-right {
+          @include responsive(md) {
+            width: 100%;
+            @include flex(row, center, center);
+          }
           img {
             max-width: 570px;
           }

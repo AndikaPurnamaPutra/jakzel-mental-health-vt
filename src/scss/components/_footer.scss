@@ -1,0 +1,79 @@
+.footer {
+  background-color: #1a2433;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  @include responsive(md) {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  .container {
+    &-footer {
+      @include flex(column, null, space-between);
+      gap: 120px;
+      @include responsive(md) {
+        gap: 60px;
+      }
+      .content {
+        &-top {
+          .subtext {
+            @include flex(row, center, space-between);
+            @include responsive(md) {
+              @include flex(column, flex-start, space-between);
+              gap: 30px;
+            }
+            &-text {
+              &-display {
+                color: $white;
+                font-family: $font-display;
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 115%; /* 64.4px */
+                letter-spacing: -1.12px;
+                max-width: 515px;
+                margin-top: 8px;
+                @include responsive(xl) {
+                  font-size: 48px;
+                  max-width: 415px;
+                }
+                @include responsive(sm) {
+                  font-size: 36px;
+                  max-width: 100%;
+                }
+              }
+            }
+            .btn-secondary {
+              @include responsive(sm) {
+                width: 100%;
+              }
+            }
+          }
+        }
+        &-bottom {
+          @include flex(row, center, space-between);
+          padding-top: 60px;
+          border-top: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+          @include responsive(md) {
+            padding-top: 30px;
+          }
+          @include responsive(sm) {
+            @include flex(column, flex-start, space-between);
+            gap: 30px;
+          }
+          .logo {
+            max-width: 137px;
+          }
+          .social-media {
+            @include flex(row, center, space-between);
+            gap: 24px;
+            .nav-link {
+              img {
+                max-width: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
