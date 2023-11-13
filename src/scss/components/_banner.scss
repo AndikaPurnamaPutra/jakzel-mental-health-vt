@@ -1,0 +1,19 @@
+.section-banner {
+  background-color: $dark-blue;
+  padding-block: 10px;
+  .container {
+    &-banner {
+      @include flex(row, center, center);
+      .text-desc {
+        color: #fcfcfc;
+        text-align: center;
+        font-family: $font-display;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 19.2px */
+        letter-spacing: -0.24px;
+      }
+    }
+  }
+}
